@@ -1,18 +1,18 @@
 # "Очаровательная наука"
 
-Спецпроект подготовлен к Международному дню женщин и девушек в науке (11 февраля).
+Медиа-проект подготовлен к Международному дню женщин и девушек в науке (11 февраля).
 
 **Размещение:**
 
-- [Github page](https://vkozh.github.io/scigirls.github.io/)
-- [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience)
+- [Github page](https://vkozh.github.io/scigirls.github.io/){:target="\_blank"}
+- [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience){:target="\_blank"}
 
 **Технологии:**
 
 - Angular, Angular Material
 - Вёрстка по БЭМ
-- Немного Bootstrap и SCSS
-- По макету дизайнера Figma [(ссылка)](https://www.figma.com/file/zFw16jNYDH8ikSNkUKeBUe/women_scientists?node-id=0%3A1)
+- Bootstrap и SCSS
+- По макету дизайнера Figma [(ссылка)](https://www.figma.com/file/zFw16jNYDH8ikSNkUKeBUe/women_scientists?node-id=0%3A1){:target="\_blank"}
 
 **Функционал:**
 
@@ -24,17 +24,9 @@
 - В блоке "О проекте" есть две анимации Lottie
 - Всплывающие подсказки и разворачивающийся текст
 
-**Развитие:**
-
-- Добавление перевода на английский язык
-
 **Проект подготовлен Группой научных коммуникаций ЛЯП ОИЯИ**
 
 ![Team](team.jpg)
-
-## Репозиторий проекта "Очаровательная наука"
-
-Страница проекта: [dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience)
 
 ## ScienceGirls
 
