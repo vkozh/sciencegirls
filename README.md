@@ -4,7 +4,6 @@
 
 **Размещение:**
 
-- [Репозиторий для разработки](https://github.com/vkozh/science-girls)
 - [Github page](https://vkozh.github.io/scigirls.github.io/)
 - [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience)
 
@@ -31,7 +30,7 @@
 
 **Проект подготовлен Группой научных коммуникаций ЛЯП ОИЯИ**
 
-![Team](team.JPG)
+![Team](team.jpg)
 
 ## Репозиторий проекта "Очаровательная наука"
 
