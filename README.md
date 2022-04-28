@@ -4,15 +4,15 @@
 
 **Размещение:**
 
-- [Github page](https://vkozh.github.io/scigirls.github.io/){:target="\_blank"}
-- [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience){:target="\_blank"}
+- [Github page](https://vkozh.github.io/scigirls.github.io/)
+- [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience)
 
 **Технологии:**
 
 - Angular, Angular Material
 - Вёрстка по БЭМ
 - Bootstrap и SCSS
-- По макету дизайнера Figma [(ссылка)](https://www.figma.com/file/zFw16jNYDH8ikSNkUKeBUe/women_scientists?node-id=0%3A1){:target="\_blank"}
+- По макету дизайнера Figma [(ссылка)](https://www.figma.com/file/zFw16jNYDH8ikSNkUKeBUe/women_scientists?node-id=0%3A1)
 
 **Функционал:**
 
