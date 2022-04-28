@@ -4,7 +4,7 @@
 
 **Размещение:**
 
-- [Github page](https://vkozh.github.io/scigirls.github.io/)
+- [Github page](https://github.com/vkozh/sciencegirls)
 - [Страница проекта: dlnp.jinr.ru/charmingscience](https://dlnp.jinr.ru/charmingscience)
 
 **Технологии:**
