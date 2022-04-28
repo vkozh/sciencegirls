@@ -1,0 +1,7 @@
+.carousel-cell {
+  height: auto!important;
+  overflow: visible!important;
+  padding: 5px;
+  box-sizing: content-box;
+}
+

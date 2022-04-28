@@ -1,0 +1,10 @@
+.about__text-wrapper {
+  display: flex;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 767px) {
+  .about__text-wrapper {
+    flex-direction: column;
+  }
+}

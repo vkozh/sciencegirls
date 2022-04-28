@@ -1,0 +1,8 @@
+.card-heroines__img-wrapper {
+  position: relative;
+  transition: all .3s ease;
+}
+
+.card-heroines__img-wrapper:hover .card-heroines__time {
+  transform: scale(1.2);
+}

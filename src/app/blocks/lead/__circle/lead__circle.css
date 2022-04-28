@@ -1,0 +1,16 @@
+.lead__circle {
+  padding: 5px;
+  max-width: 180px;
+  min-width: 113px;
+  flex-shrink: 1;
+  flex-basis: 180px;
+}
+
+@media screen and (max-width: 767px) {
+  .lead__circle {
+    padding: 5px;
+   /* max-width: 113px;*/
+    min-width: 92px;
+   /* flex-basis: 113px;*/
+  }
+}

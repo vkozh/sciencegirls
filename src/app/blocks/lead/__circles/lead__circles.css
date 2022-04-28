@@ -1,0 +1,20 @@
+.lead__circles {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  flex-wrap: nowrap;
+
+ /* display: grid;
+  justify-content: start;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 190px));
+  gap: 0 1%;
+  direction: rtl;*/
+}
+
+@media screen and (max-width: 767px) {
+  .lead__circles {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 40px;
+  }
+}

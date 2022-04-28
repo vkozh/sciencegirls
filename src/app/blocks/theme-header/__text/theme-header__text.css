@@ -1,0 +1,17 @@
+.theme-header__text {
+  margin-left: 30px;
+  font-size: 26px;
+  line-height: 1.5;
+  z-index: 1;
+}
+
+.theme-header__text:last-of-type {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-header__text {
+    margin-left: 0;
+    font-size: 18px;
+  }
+}

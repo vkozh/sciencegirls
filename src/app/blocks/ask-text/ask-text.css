@@ -1,0 +1,30 @@
+.ask-text {
+  margin: 12px 0 0;
+  padding: 50px 30px;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: var(--rose);
+  color: #fff;
+  font-size: 30px;
+  text-align: center;
+}
+
+.ask-text a {
+  margin: 0;
+  color: #fff;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.ask-text a:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+  .ask-text {
+    padding: 40px 7%;
+    font-size: 18px;
+    text-align: start;
+  }
+
+}

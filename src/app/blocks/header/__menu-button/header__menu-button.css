@@ -1,0 +1,32 @@
+.header__menu-button {
+  background-image: url(../../../../assets/images/menu-btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50px 40px;
+  background-color: inherit;
+  border: none;
+  width: 50px;
+  height: 40px;
+  padding: 0;
+  margin: 20px 0 20px auto;
+  transition: all .3s;
+}
+
+.header__menu-button_close {
+  background-size: 30px 30px;
+  width: 30px;
+  height: 30px;
+  margin: 0 auto 20px 60px;
+  background-image: url(../../../../assets/images/x.svg);
+}
+
+@media screen and (max-width: 767px) {
+  .header__menu-button {
+    background-size: 20px 18px;
+    margin: 10px 0 10px;
+  }
+
+  .header__menu-button_close {
+    margin: 0 auto 10px 34px;
+  }
+}

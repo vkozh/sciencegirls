@@ -1,0 +1,13 @@
+$grid-columns: 14 !default;
+$grid-gutter-width: 0!default;
+
+$mobileColumns: 9;
+$mobileGap: 20px;
+
+$container-max-widths: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+)

@@ -1,0 +1,37 @@
+<button class="header__menu-button" [matMenuTriggerFor]="menu" aria-label="Menu button"
+        #menuTrigger="matMenuTrigger"></button>
+<mat-menu #menu="matMenu" [overlapTrigger]="true">
+  <button class="header__menu-button header__menu-button_close" type="button"
+    (click)="menuTrigger.closeMenu()"></button>
+  <a mat-menu-item class="header__menu-item" routerLink="about">
+    <span class="header__menu-item-text">Интерес к науке</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Начало карьеры</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Семья и работа</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Эксперименты</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Трудности</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Увлечения</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Идеальный день</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-text">Пожелания</span>
+  </a>
+  <div class="dropdown-divider header__menu-item-divider"></div>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-footer">О проекте</span>
+  </a>
+  <a mat-menu-item class="header__menu-item">
+    <span class="header__menu-item-footer">Стать участником</span>
+  </a>
+</mat-menu>

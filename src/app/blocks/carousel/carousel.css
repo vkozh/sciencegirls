@@ -1,0 +1,10 @@
+.carousel {
+  height: 250px!important;
+  z-index: 1!important;
+}
+
+@media screen and (min-width: 1200px) {
+  .carousel-arrows {
+    display: none !important;
+  }
+}

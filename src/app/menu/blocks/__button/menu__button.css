@@ -1,0 +1,14 @@
+.menu__button {
+  background-image: url(../../../../assets/images/menu-btn.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 20px;
+  background-color: #fff;
+  border: none;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  margin: 20px 0 20px auto;
+  transition: all .3s;
+}

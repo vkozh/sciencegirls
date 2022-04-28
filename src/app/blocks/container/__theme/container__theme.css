@@ -1,0 +1,10 @@
+.container__theme {
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .container__theme {
+    margin-bottom: 50px;
+  }
+
+}

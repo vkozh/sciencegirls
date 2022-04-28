@@ -1,0 +1,10 @@
+.carousel-dots {
+  display: none;
+  border-color: var(--terra);
+}
+
+@media screen and (max-width: 424px) {
+  .carousel-dots {
+    display: block;
+  }
+}

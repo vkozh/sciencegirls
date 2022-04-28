@@ -1,0 +1,47 @@
+.card-heroines__text {
+  font-size: 18px;
+  display: flex;
+  margin: 30px 20px 0 0;
+  line-height: 1.5;
+}
+
+.card-heroines__text::before {
+  content: "«";
+  font-size: 144px;
+  font-family: Deca;
+  line-height: 0.2;
+  margin: 0 15px 0;
+  font-weight: bold;
+  color: var(--rose);
+}
+
+.card-heroines:nth-of-type(2n) .card-heroines__text::before {
+  color: var(--sky);
+}
+
+.card-heroines:nth-of-type(3n) .card-heroines__text::before {
+  color: var(--terra);
+}
+
+.card-heroines:nth-of-type(4n) .card-heroines__text::before {
+  color: var(--sky);
+}
+
+.card-heroines:nth-of-type(5n) .card-heroines__text::before {
+  color: var(--terra);
+}
+
+.card-heroines:nth-of-type(6n) .card-heroines__text::before {
+  color: var(--rose);
+}
+
+@media screen and (max-width: 576px) {
+  .card-heroines__text {
+    display: block;
+  }
+
+  .card-heroines__text::before {
+    font-size: 60px;
+    margin: 0 7px 0 0;
+  }
+}

@@ -1,0 +1,19 @@
+.video-card {
+  position: relative;
+  padding: 5px;
+  max-width: 280px;
+  min-width: 180px;
+}
+
+.video-card p {
+  margin: 26px auto 0;
+  max-width: min-content;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+  .video-card p {
+    margin: 26px 0;
+    flex-basis: 220px;
+  }
+}

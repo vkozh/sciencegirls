@@ -1,0 +1,6 @@
+@import url("./blocks/video/video.css");
+
+@import url("./blocks/timing/timing.css");
+@import url("./blocks/timing/__item/timing__item.css");
+@import url("./blocks/timing/__text/timing__text.css");
+@import url("./blocks/timing/__title/timing__title.css");

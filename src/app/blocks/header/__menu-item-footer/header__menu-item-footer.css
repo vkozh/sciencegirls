@@ -1,0 +1,22 @@
+.header__menu-item-footer {
+  font-family: Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: var(--rose);
+}
+
+@media screen and (max-width: 576px) {
+  .header__menu-item-footer {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+
+  .header__menu-item-footer {
+    font-size: 14px;
+  }
+}

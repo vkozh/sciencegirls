@@ -1,0 +1,37 @@
+.card-heroines__time {
+  color: var(--rose);
+  width: 63px;
+  height: 63px;
+  position: absolute;
+  bottom: -5px;
+  left: 12px;
+  padding: 5px 4px 3px;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: var(--sky);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .2s ease;
+  cursor: pointer;
+  backface-visibility: hidden;
+  image-rendering: -webkit-optimize-contrast;
+  z-index: 2;
+}
+
+.card-heroines__time span {
+  width: 19px;
+  color: indianred;
+  font-size: 30px;
+  line-height: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .card-heroines__time {
+    width: 58px;
+    height: 58px;
+    bottom: -12px;
+    left: 0px;
+  }
+}

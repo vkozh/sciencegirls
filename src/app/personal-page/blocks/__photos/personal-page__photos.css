@@ -1,0 +1,13 @@
+.personal-page__photos{
+  max-width: 620px;
+}
+
+@media screen and (max-width: 767px) {
+  .personal-page__photos .carousel-cell{
+    width: 80vw!important;
+  }
+  .personal-page__photos .carousel{
+    width: 80vw!important;
+    margin: 0 auto;
+  }
+}

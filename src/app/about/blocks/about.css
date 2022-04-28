@@ -1,0 +1,10 @@
+.about {
+  background-color: var(--sky);
+  border: none;
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    overflow: visible;
+  }
+}

@@ -1,0 +1,16 @@
+.video-card__play-button {
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  width: 23%;
+  max-width: 61px;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .video-card__play-button {
+    width: 54px;
+    height: 54px;
+  }
+}

@@ -1,0 +1,21 @@
+.lead__name {
+  font-size: 18px;
+  line-height: 1.2;
+  margin: 10px 0;
+  cursor: pointer;
+  max-width: min-content;
+}
+
+@media screen and (max-width: 992px) {
+  .lead__name {
+    font-size: 14px;
+    margin: 14px 0;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .lead__name {
+    font-size: 12px;
+    margin: 7px 0;
+  }
+}

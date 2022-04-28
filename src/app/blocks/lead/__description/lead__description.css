@@ -1,0 +1,10 @@
+.lead__description {
+  display: flex;
+  align-items: start;
+}
+
+@media screen and (max-width: 767px) {
+  .lead__description {
+    flex-direction: column;
+  }
+}

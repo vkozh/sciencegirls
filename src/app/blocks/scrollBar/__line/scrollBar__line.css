@@ -1,0 +1,5 @@
+.scrollBar__line {
+  height: 3px;
+  background: var(--rose);
+  width: 0%;
+}

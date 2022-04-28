@@ -1,0 +1,9 @@
+.menu-item-footer {
+  font-family: Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: var(--rose);
+}

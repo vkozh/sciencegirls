@@ -1,0 +1,4 @@
+.carousel-cells {
+  margin: 0 0 0 auto!important;
+  backface-visibility: hidden;
+}

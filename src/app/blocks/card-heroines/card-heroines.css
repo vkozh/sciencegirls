@@ -1,0 +1,11 @@
+.card-heroines {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10px 60px 0;
+  flex-basis: 390px;
+  flex-grow: 1;
+}
+
+.card-heroines:last-of-type{
+  margin: 0 0 60px;
+}

@@ -1,0 +1,14 @@
+.theme-square__name {
+  font-family: Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 1.2;
+  margin: 26px 0 20px 0;
+  cursor: pointer;
+  transition: color .3s ease;
+}
+
+.theme-square__name:hover {
+  color: var(--rose);
+}

@@ -1,0 +1,15 @@
+<section class="container__creators creators">
+  <h2 class="creators__title offset-1 col-12">Над проектом работали:</h2>
+  <carousel [cellWidth]="140" style="z-index:1">
+    <div class="creator carousel-cell" *ngFor="let creator of creators">
+      <img src="{{creator.picture}}" class="creator__img">
+      <div>
+        <p class="creator__name">{{creator.name}}</p>
+        <div class="creator__job-wrapper">
+          <p class="creator__job">{{creator.job}}</p>
+          <p class="creator__femijob">{{creator.femijob}}</p>
+        </div>
+      </div>
+    </div>
+  </carousel>
+</section>

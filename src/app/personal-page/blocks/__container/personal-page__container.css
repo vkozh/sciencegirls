@@ -1,0 +1,6 @@
+.personal-page__container {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 0 53px 0;
+}

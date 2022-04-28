@@ -1,0 +1,29 @@
+.lead__button {
+  margin-right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  min-height: 60px;
+  min-width: 180px;
+  background-color: var(--rose);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 24px;
+  text-decoration: none;
+  padding: 15px 33px;
+  line-height: 1.2;
+  opacity: 1;
+  transition: opacity .3s ease;
+}
+
+.lead__button:hover {
+  opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+  .lead__button {
+    order: 2;
+    margin: 30px 0 0 auto;
+  }
+}

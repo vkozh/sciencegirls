@@ -1,0 +1,27 @@
+.personal-page__close {
+  cursor: pointer;
+  display: flex;
+  position: fixed;
+  position: sticky;
+  top: 30px;
+  justify-content: end;
+  justify-content: flex-end;
+  z-index: 10001;
+}
+
+.personal-page__close span {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 18px 0 0;
+  z-index: 10001;
+}
+
+.personal-page__close svg {
+  width: 30px;
+  height: 30px;
+}

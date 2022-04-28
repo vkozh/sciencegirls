@@ -1,0 +1,8 @@
+.menu__item-text {
+  font-family: Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 1.8;
+  color: var(--rose);
+}

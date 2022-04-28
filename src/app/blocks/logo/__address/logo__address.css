@@ -1,0 +1,13 @@
+.logo__address {
+  margin: 0;
+  text-decoration: none;
+  font-weight: bold;
+  line-height: 2;
+  color: inherit;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.logo__address:hover {
+  opacity: .6;
+}

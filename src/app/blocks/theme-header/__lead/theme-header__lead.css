@@ -1,0 +1,22 @@
+.theme-header__lead {
+  font-family: Deca;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.theme-header__lead:last-of-type {
+  margin-bottom: 70px;
+}
+
+.theme-header__lead__photogallery{
+  margin-bottom: 90px;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-header__lead {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,7 @@
+@import url(./blocks/creators.css);
+
+@import url(./blocks/creator.css);
+@import url(./blocks/__title/creators__title.css);
+@import url(./blocks/__img/creator__img.css);
+@import url(./blocks/__name/creator__name.css);
+@import url(./blocks/__job/creator__job.css);

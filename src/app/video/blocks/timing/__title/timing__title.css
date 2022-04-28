@@ -1,0 +1,10 @@
+.timing__title {
+  font-size: 24px;
+}
+
+@media screen and (max-width: 677px) {
+  .timing__title {
+    margin-bottom: 30px;
+    font-size: 18px;
+  }
+}

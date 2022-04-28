@@ -1,0 +1,527 @@
+<div class="scrollBar">
+  <div class="scrollBar__container">
+    <div class="scrollBar__line"></div>
+  </div>
+</div>
+
+<div class="container" appScollprogress>
+  <header class="header">
+    <div class="header__menu offset-1 col-12">
+      <button class="header__menu-button" [matMenuTriggerFor]="menu" aria-label="Menu button"
+        #menuTrigger="matMenuTrigger"></button>
+      <mat-menu #menu="matMenu" [overlapTrigger]="true">
+        <button class="header__menu-button header__menu-button_close" type="button"
+          (click)="menuTrigger.closeMenu()"></button>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="interestInScience">
+          <span class="header__menu-item-text">Интерес к науке</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="carierStart">
+          <span class="header__menu-item-text">Начало карьеры</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="familyAndWork">
+          <span class="header__menu-item-text">Семья и работа</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="experiments">
+          <span class="header__menu-item-text">Научные проекты</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="difficulties">
+          <span class="header__menu-item-text">Трудности</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="hobbies">
+          <span class="header__menu-item-text">Увлечения</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="perfectDay">
+          <span class="header__menu-item-text">Идеальный день</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="wishes">
+          <span class="header__menu-item-text">Пожелания</span>
+        </a>
+        <div class="dropdown-divider header__menu-item-divider"></div>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="aboutProject">
+          <span class="header__menu-item-footer">О проекте</span>
+        </a>
+        <a mat-menu-item class="header__menu-item" routerLink="." fragment="becomeAheroine">
+          <span class="header__menu-item-footer">Стать участницей</span>
+        </a>
+      </mat-menu>
+    </div>
+    <div class="header__logos">
+      <figure class="logo">
+        <a class="logo__link" href="https://dlnp.jinr.ru" target="_blank"></a>
+        <img class="logo__image" src="./assets/images/logo_dlnp.svg" alt="dlnp logo">
+        <figcaption class="logo__caption">
+          Лаборатория ядерных проблем
+          им.&nbsp;В.&nbsp;П.&nbsp;Джелепова
+        </figcaption>
+      </figure>
+      <figure class="logo">
+        <a class="logo__link" href="https://jinr.ru" target="_blank"></a>
+        <img class="logo__image" src="./assets/images/logo_jinr.svg" alt="jinr logo">
+        <figcaption class="logo__caption">
+          Объединенный институт ядерных исследований
+        </figcaption>
+      </figure>
+    </div>
+  </header>
+
+
+  <main class="main">
+    <section class="lead" id="lead">
+      <h1 class="lead__title col-12 offset-1">Очаровательная наука</h1>
+      <div class="lead__circles row col-12 offset-1">
+        <div class="lead__circle col-md-2" *ngFor="let heroine of heroines" (click)="openDialog(heroine)">
+          <img src="{{heroine.img_src}}" alt="" class="lead__image">
+          <p class="lead__name">{{heroine.fullName}}</p>
+        </div>
+      </div>
+
+      <div class="lead__description offset-1 offset-md-1 offset-lg-2 col-12 col-md-12 col-lg-11">
+        <div class="lead__text-wrapper">
+          <p class="lead__text">Лаборатория ядерных проблем&nbsp;им. В.&nbsp;П.&nbsp;Джелепова <span
+              class="tooltip-element" data-tooltip="Объединенный институт ядерных исследований, г. Дубна">ОИЯИ</span>
+            начинает медиапроект &laquo;Очаровательная наука&raquo;. Поводом послужил Международный день женщин
+            в&nbsp;науке, который отмечается 11&nbsp;февраля.</p>
+          <p class="lead__text"> В&nbsp;нашей Лаборатории&nbsp;19,4% научных сотрудников&nbsp;&mdash; женщины. Мы
+            поговорили с&nbsp;некоторыми из&nbsp;них и узнали, сложно&nbsp;ли заниматься фундаментальной
+            наукой, приходилось&nbsp;ли испытывать трудности в&nbsp;карьере, как наших героинь поддерживают
+            родные&nbsp;и, вообще, женское&nbsp;ли это дело&nbsp;&mdash;
+            наука.
+          </p>
+          <div class="read-more lead__read-more"><span class="read-more__blue-line"></span><span
+              class="read-more__button" (click)="onClick()"></span><span class="read-more__blue-line"></span></div>
+          <p class="lead__text lead__text_collapsed">На&nbsp;сайте ООН, в&nbsp;разделе, посвященном Дню женщин-ученых,
+            отмечается, что &laquo;главными препятствиями для женщин в&nbsp;науке являются стереотипы
+            и&nbsp;предубеждения в&nbsp;обществе&raquo;. Героини нашего проекта размышляют и&nbsp;на&nbsp;эту тему
+            и&nbsp;делятся со&nbsp;зрителями своим личным опытом.<br><br>
+            Вдохновляющих примеров успешной работы женщин-ученых достаточно много. Показать эти примеры
+            и&nbsp;рассказать о&nbsp;них&nbsp;&mdash; цель нашего проекта.
+          </p>
+        </div>
+      </div>
+      <iframe class="lead__video col-14 col-md-12 offset-md-1"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;cursor: pointer;
+          }img{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{background-image: url(./assets/images/whiteArrow.svg);
+            background-size: 40% 45%;background-repeat: no-repeat;background-position: center;position:absolute;
+            top: 50%;left: 50%;height: 133px;width: 133px;border-radius: 50%;display: flex;
+            justify-content: center;align-items: center;font: 48px/1.5 sans-serif;color: white;
+            background-color: #DD5061;transform: scale(1) translate(-50%, -50%);margin: 0;box-shadow: 0px 0px 6px rgb(0 0 0 / 0);transition: all .3s ease;}body:hover span{box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);transform:scale(1.05) translate(-48%, -48%);}
+            @media screen and (max-width: 767px){span {height: 38px;width: 38px;font: 22px/1.5 sans-serif;}}</style>
+            <a href=https://www.youtube.com/embed/5JZ8WBp2E0k?autoplay=1>
+              <img src=./assets/images/videocovers/charmingScience.jpg alt='Main project video' style='filter: brightness(0.8);'><span></span></a>"
+        src="https://www.youtube.com/embed/5JZ8WBp2E0k" title="Main project video" allowfullscreen="">
+      </iframe>
+    </section>
+
+    <section class="theme container__theme" id="interestInScience">
+      <div class="theme-header row">
+        <h2 class="theme-header__title col-6 col-md-4 offset-1">Интерес<br>к науке</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Я поняла, что хочу заниматься только этим»</p>
+          <p class="theme-header__text">Сфера деятельности Объединенного института ядерных исследований в&nbsp;первую
+            очередь фундаментальная наука.
+            Кто и&nbsp;как приходит в&nbsp;науку? Кто-то пошел в&nbsp;профильный вуз по&nbsp;совету родителей, кого-то
+            увлек своим предметом школьный учитель, а&nbsp;кто-то заинтересовался наукой благодаря захватывающей книге.
+          </p>
+        </div>
+      </div>
+
+      <div class="row flex-wrap">
+        <div class="theme__cards offset-1 col-12 col-lg-6">
+          <ng-template ngFor let-heroine [ngForOf]="heroines">
+            <div class="card-heroines" *ngIf='condition_theme_kravchenko(heroine.name)'>
+              <div class="card-heroines__header" (click)="openVideo(heroine, heroine.timeCode.interestInScience)">
+                <div class="card-heroines__img-wrapper">
+                  <!-- <img class="card-heroines__play-button" src="./assets/images/video_play.svg" alt="Play"> -->
+                  <span class="card-heroines__time"><span><svg width="17" height="23" viewBox="0 0 17 23" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path
+                          d="M15.8302 10.7773C16.3668 11.1771 16.3668 11.9811 15.8302 12.381L2.37878 22.4048C1.71916 22.8963 0.781249 22.4255 0.781249 21.6029L0.78125 1.5553C0.78125 0.732675 1.71916 0.261911 2.37878 0.75345L15.8302 10.7773Z"
+                          fill="#DD5061" />
+                      </svg>
+                    </span>{{heroine.time.interestInScience}}</span>
+                  <img src="{{heroine.img_src}}" alt="" class="card-heroines__image">
+                </div>
+                <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+              </div>
+              <p class="card-heroines__text">
+                <span class="card-heroines__inner-text textForConverting">{{heroine.interestInScience}}</span>
+              </p>
+            </div>
+          </ng-template>
+        </div>
+        <app-photogallery [heroineFromApp]="elena"
+          class="theme-header__photogallery col-11 col-lg-5 offset-3 offset-md-2 offset-lg-1"></app-photogallery>
+      </div>
+
+      <div class="theme__cards row offset-1 col-12">
+        <ng-template ngFor let-heroine [ngForOf]="heroines">
+          <div class="card-heroines" *ngIf='condition_theme_interestInScience(heroine.name)'>
+            <div class="card-heroines__header" (click)="openVideo(heroine, heroine.timeCode.interestInScience)">
+              <div class="card-heroines__img-wrapper">
+                <!-- <img class="card-heroines__play-button" src="./assets/images/video_play.svg" alt="Play"> -->
+                <span class="card-heroines__time"><span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="23" fill="none">
+                      <path
+                        d="M15.8302 10.7773c.5366.3998.5366 1.2038 0 1.6037L2.37878 22.4048c-.65962.4915-1.597531.0207-1.597531-.8019L.78125 1.5553c0-.822625.93791-1.293389 1.59753-.80185L15.8302 10.7773Z"
+                        fill="#DD5061" /></svg>
+                  </span>{{heroine.time.interestInScience}}</span>
+                <img src="{{heroine.img_src}}" alt="" class="card-heroines__image">
+              </div>
+              <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+            </div>
+            <p class="card-heroines__text">
+              <span class="card-heroines__inner-text textForConverting">{{heroine.interestInScience}}</span>
+            </p>
+          </div>
+        </ng-template>
+      </div>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Хорошо, если наука интересна будущему учёному:
+        естественные науки сложны в&nbsp;изучении, а&nbsp;интерес помогает преодолевать трудности, а&nbsp;также рутину.
+        Как мы&nbsp;видим из&nbsp;примеров наших героинь, семья и&nbsp;школьные педагоги вполне могут помочь развить
+        интерес.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">
+        Наши собеседницы отмечают, что занятия точными науками требуют таких качеств, как &laquo;технический склад
+        ума&raquo; (Д.&nbsp;Зинатулина), &laquo;умение работать
+        самостоятельно, умение не&nbsp;только решить какую-то задачу, но&nbsp; и&nbsp;поставить ее&nbsp;перед
+        собой, увидеть&nbsp;ее&raquo; (Г.&nbsp;Карамышева), &laquo;усидчивость и&nbsp;терпение&raquo;
+        (М.&nbsp;Александрова).</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">
+        Студентам нередко приходится прикладывать много стараний, чтобы
+        начать понимать профильные предметы, разбираться в&nbsp;них. Зачастую эти &laquo;сверхусилия&raquo; могут стать
+        причиной разочарования в&nbsp;своем выборе, а&nbsp;позже и&nbsp;причиной отказа от&nbsp;работы
+        по&nbsp;специальности.
+      </p>
+    </section>
+
+    <section class="theme container__theme" id="carierStart">
+      <div class="theme-header row">
+        <h2 class="theme-header__title col-6 col-md-4 offset-1 theme-header__title_color_lgray">Начало<br>карьеры</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Пробовать разное, искать себя»</p>
+          <p class="theme-header__text">Первые годы в&nbsp;научной
+            организации, пожалуй, самые сложные. Выпускник попадает в&nbsp;мир реальной науки и&nbsp;вынужден
+            параллельно
+            с&nbsp;работой расширять свои знания и&nbsp;умения.
+          </p>
+        </div>
+      </div>
+
+      <iframe class="lead__video col-14 col-md-12 offset-md-1"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;cursor: pointer;
+          }img{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{background-image: url(./assets/images/whiteArrow.svg);
+            background-size: 40% 45%;background-repeat: no-repeat;background-position: center;position:absolute;
+            top: 50%;left: 50%;height: 133px;width: 133px;border-radius: 50%;display: flex;
+            justify-content: center;align-items: center;font: 48px/1.5 sans-serif;color: white;
+            background-color: #DD5061;transform: translate(-50%, -50%);margin: 0;box-shadow: 0px 0px 6px rgb(0 0 0 / 0);transition: all .3s ease;}body:hover span{box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);transform:scale(1.05) translate(-48%, -48%);}
+            @media screen and (max-width: 767px){span {height: 38px;width: 38px;font: 22px/1.5 sans-serif;}}</style>
+            <a href=https://www.youtube.com/embed/ZQzMCEtFoeY?start=268&autoplay=1>
+              <img src=./assets/images/videocovers/carierStart.jpg alt='Carier start video' style='filter: brightness(0.8);'><span></span></a>"
+        src="https://www.youtube.com/embed/ZQzMCEtFoeY?start=268" title="Main project video" allowfullscreen="">
+      </iframe>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">По&nbsp;словам <b>Людмилы
+          Колупаевой</b>, вузы, давая основу, часто &laquo;запаздывают в&nbsp;сравнении с&nbsp;современной наукой,
+        которая прямо сейчас делается
+        в&nbsp;научных центрах&raquo;. &laquo;У&nbsp;студента, как и&nbsp;у&nbsp;школьника, нет практически никакого
+        понимания, что сегодня происходит в&nbsp;исследовательских институтах&raquo;,&nbsp;&mdash; добавляет она. </p>
+      <app-photogallery [heroineFromApp]="luda" class="theme-header__photogallery row col-11 offset-2">
+      </app-photogallery>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">
+        Иногда оказывается, что выбор направления при поступлении в&nbsp;вуз был ошибочным. <strong>Ирина
+          Титкова</strong> считает, что &laquo;понять, чего ты&nbsp;хочешь, до&nbsp;вуза невозможно. В&nbsp;семнадцать
+        лет понять этого нельзя, и&nbsp;в&nbsp;восемнадцать нельзя. То, что в&nbsp;некоторых странах совершеннолетие
+        наступает в&nbsp;двадцать один год, совершенно правильно. Только тогда человек может начать задумываться
+        и&nbsp;что-то выбирать. У&nbsp;меня это вообще получилось в&nbsp;тридцать три года&raquo;. Пришлось восполнять
+        недостающие знания параллельно с&nbsp;работой.
+      </p>
+      <app-photogallery [heroineFromApp]="irina" class="theme-header__photogallery row col-11 offset-2">
+      </app-photogallery>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">
+        <strong>Маргарита Васильевна Александрова</strong> не&nbsp;знала, что своё самое сильное в&nbsp;жизни
+        увлечение она найдет позже и&nbsp;в&nbsp;совсем другой области. Окончила Пензенский политехнический институт,
+        пойти
+        в&nbsp;который посоветовала мама, проработала несколько лет по&nbsp;технической специальности в&nbsp;Обнинске.
+        Работала хорошо, но&nbsp;без интереса. Потом через клуб молодых ученых увлеклась генетикой. Перешла
+        в&nbsp;Институт медицинской радиологии, отдел биофизики. Новую профессию осваивала самостоятельно, классического
+        биологического образования не&nbsp;получила. Затем закончила аспирантуру, защитила диссертацию.
+      </p>
+      <app-photogallery [heroineFromApp]="margo" class="theme-header__photogallery row col-11 offset-2">
+      </app-photogallery>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Получается, что начало научной
+        карьеры&nbsp;&mdash; это трудное, но&nbsp;интересное время поиска себя в&nbsp;науке. <strong>Дания
+          Зинатулина</strong> советует &laquo;не&nbsp;уходить в&nbsp;узкие направления, пробовать разное, искать себя.
+        Пробовать и&nbsp;не&nbsp;сдаваться&raquo;.</p>
+      <app-photogallery [heroineFromApp]="dania" class="theme-header__photogallery row col-11 offset-2">
+      </app-photogallery>
+    </section>
+
+    <section class="theme container__theme" id="familyAndWork">
+      <div class="theme-header row">
+        <h2 class="theme-header__title theme-header__title_color_blue col-6 col-md-4 offset-1">Семья<br>и работа</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Без их поддержки я бы не справилась»</p>
+          <p class="theme-header__text">Семья, особенно с&nbsp;детьми, многим кажется основной трудностью для построения
+            успешной научной карьеры. Семья требует времени и&nbsp;сил, дети могут заболеть, когда нужно уезжать
+            в&nbsp;командировку, а&nbsp;отчетный концерт хора придется как раз на&nbsp;вечерний созвон
+            с&nbsp;зарубежными коллегами. Наши героини не&nbsp;отрицают: да, сочетать семью и&nbsp;науку сложно.
+            Кому-то приходилось работать за&nbsp;компьютером с&nbsp;малышом на&nbsp;руках, кому-то&nbsp;&mdash; усадив
+            одного ребенка играть слева от&nbsp;себя, а&nbsp;другого справа. В&nbsp;то&nbsp;же время именно семья
+            поддерживает человека в&nbsp;трудную минуту, воодушевляет его на&nbsp;принятие важного решения.
+          </p>
+        </div>
+      </div>
+      <div class="theme__cards row offset-1 col-12">
+        <ng-template ngFor let-heroine [ngForOf]="heroines">
+          <div class="card-heroines" *ngIf='condition_theme_familyAndWork(heroine.name)'>
+            <div class="card-heroines__header" (click)="openVideo(heroine, heroine.timeCode.familyAndWork)">
+              <div class="card-heroines__img-wrapper">
+                <span class="card-heroines__time"><span><svg width="17" height="23" viewBox="0 0 17 23" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M15.8302 10.7773C16.3668 11.1771 16.3668 11.9811 15.8302 12.381L2.37878 22.4048C1.71916 22.8963 0.781249 22.4255 0.781249 21.6029L0.78125 1.5553C0.78125 0.732675 1.71916 0.261911 2.37878 0.75345L15.8302 10.7773Z"
+                        fill="#DD5061" />
+                    </svg>
+                  </span>{{heroine.time.familyAndWork}}</span>
+                <img src="{{heroine.img_src}}" alt="" class="card-heroines__image">
+              </div>
+              <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+            </div>
+            <p class="card-heroines__text card-heroines__text_noquote">
+              <span class="card-heroines__inner-text textForConverting">{{heroine.familyAndWork}}</span>
+            </p>
+          </div>
+        </ng-template>
+      </div>
+    </section>
+
+    <section class="theme" id="experiments">
+      <div class="theme-header row">
+        <h2 class="theme-header__title col-8 col-sm-7 col-md-4 offset-1">Научные<br>проекты</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Работа, которой занимаешься с радостью»</p>
+          <p class="theme-header__text">Каждая из наших собеседниц идёт в&nbsp;науке своим путем.
+            И&nbsp;всё&nbsp;же их всех объединяет&nbsp;то, что они любят свою работу и&nbsp;добиваются впечатляющих
+            результатов в&nbsp;своих областях исследований.
+          </p>
+        </div>
+      </div>
+      <iframe class="lead__video col-14 col-md-12 offset-md-1"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;cursor: pointer;
+        }img{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{background-image: url(./assets/images/whiteArrow.svg);
+          background-size: 40% 45%;background-repeat: no-repeat;background-position: center;position:absolute;
+          top: 50%;left: 50%;height: 133px;width: 133px;border-radius: 50%;display: flex;
+          justify-content: center;align-items: center;font: 48px/1.5 sans-serif;color: white;
+          background-color: #DD5061;transform: translate(-50%, -50%);margin: 0;box-shadow: 0px 0px 6px rgb(0 0 0 / 0);transition: all .3s ease;}body:hover span{box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);transform:scale(1.05) translate(-48%, -48%);}
+          @media screen and (max-width: 767px){span {height: 38px;width: 38px;font: 22px/1.5 sans-serif;}}</style>
+          <a href=https://www.youtube.com/embed/ZQzMCEtFoeY?start=268&autoplay=1>
+            <img src=./assets/images/videocovers/experiments.jpg alt='Carier start video' style='filter: brightness(0.8);'><span></span></a>"
+        src="https://www.youtube.com/embed/ZQzMCEtFoeY?start=1129" title="Main project video" allowfullscreen="">
+      </iframe>
+      <div class="theme-square theme__theme-square offset-1 col-12">
+        <div class="theme-square__card" *ngFor="let heroine of heroines">
+          <!--(click)="openVideo(heroine)"-->
+          <img class="theme-square__card-img" src="{{heroine.images.experiments}}" alt="">
+          <p class="theme-square__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+          <p class="theme-square__quote textForConverting">{{heroine.experiments}}</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme container__theme" id="difficulties">
+      <div class="theme-header row">
+        <h2 class="theme-header__title theme-header__title_color_lgray col-6 col-md-4 offset-1">Трудности</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Это были точки роста»</p>
+          <p class="theme-header__text">Какие трудности могут ждать в&nbsp;научной карьере? Есть&nbsp;ли <span
+              class="nobr">какие-то</span>
+            особые сложности в&nbsp;работе женщин-учёных? Почему в&nbsp;естественных науках доля женщин чуть
+            больше&nbsp;20%?
+          </p>
+        </div>
+      </div>
+      <iframe class="lead__video col-14 col-md-12 offset-md-1"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;cursor: pointer;
+          }img{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{background-image: url(./assets/images/whiteArrow.svg);
+            background-size: 40% 45%;background-repeat: no-repeat;background-position: center;position:absolute;
+            top: 50%;left: 50%;height: 133px;width: 133px;border-radius: 50%;display: flex;
+            justify-content: center;align-items: center;font: 48px/1.5 sans-serif;color: white;
+            background-color: #DD5061;transform: translate(-50%, -50%);margin: 0;box-shadow: 0px 0px 6px rgb(0 0 0 / 0);transition: all .3s ease;}body:hover span{box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);transform:scale(1.05) translate(-48%, -48%);}
+            @media screen and (max-width: 767px){span {height: 38px;width: 38px;font: 22px/1.5 sans-serif;}}</style>
+            <a href=https://www.youtube.com/embed/ZQzMCEtFoeY?start=2065&autoplay=1>
+              <img src=./assets/images/videocovers/difficulties.jpg alt='Carier start video' style='filter: brightness(0.8);'><span></span></a>"
+        src="https://www.youtube.com/embed/ZQzMCEtFoeY" title="Main project video" allowfullscreen="">
+      </iframe>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Рассказы наших героинь свидетельствуют
+        о&nbsp;том, что есть общие&nbsp;&mdash; и&nbsp;для мужчин, и&nbsp;для женщин&nbsp;&mdash; трудности, которые
+        в&nbsp;основном связаны
+        с&nbsp;попаданием в&nbsp;стагнирующие сферы науки, где мало интересных проектов и&nbsp;нет движения;
+        с&nbsp;необходимостью переквалификации при смене научного направления (а&nbsp;одновременно
+        учиться и&nbsp;работать непросто); с&nbsp;небольшой зарплатой начинающих учёных. А&nbsp;еще есть длительные
+        командировки, ночные смены на&nbsp;установках и&nbsp;онлайн-совещания поздно вечером с&nbsp;коллегами
+        из&nbsp;коллабораций в&nbsp;других часовых поясах.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Есть также проблемы, с&nbsp;которыми
+        сталкиваются только женщины. ООН считает, что &laquo;главными препятствиями для женщин в&nbsp;науке являются
+        стереотипы и&nbsp;предубеждения в&nbsp;обществе&raquo;. &laquo;Зачем тебе эта наука?&raquo;,
+        &laquo;Вы&nbsp;много видели женщин-академиков?&raquo;, &laquo;Уйдешь в&nbsp;декрет и&nbsp;в&nbsp;науку
+        не&nbsp;вернёшься&raquo;&nbsp;&mdash; такие фразы может услышать девушка от&nbsp;родителей, знакомых
+        и&nbsp;коллег.
+        Кстати, девушек
+        не&nbsp;мотивирует идти в&nbsp;науку и&nbsp;малое количество женщин среди руководителей, обладателей высоких
+        научных званий и&nbsp;лауреатов премий. Если&nbsp;бы женщины, занимающие такие должности и&nbsp;обладающие
+        такими званиями, были&nbsp;бы представлены в&nbsp;науке в&nbsp;равной степени с&nbsp;мужчинами, это
+        могло&nbsp;бы служить примером успешной самореализации женщин и&nbsp;привлекать в&nbsp;науку больше девушек.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Уход в&nbsp;декрет может стать причиной
+        отставания в&nbsp;науке, и,&nbsp;если руководство и&nbsp;коллеги
+        не&nbsp;помогут, возвращение не будет простым. Здесь важна и&nbsp;поддержка семьи.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">В&nbsp;конце прошлого века некоторые
+        из&nbsp;наших героинь только начинали свой путь в&nbsp;науке и&nbsp;уже тогда сталкивались со&nbsp;сложностями.
+        Однажды И.&nbsp;В.&nbsp;Титкова обнаружила, что ее&nbsp;выплаты по&nbsp;гранту в&nbsp;четыре раза меньше, чем
+        у&nbsp;ее&nbsp;коллег: &laquo;Я&nbsp;работала в&nbsp;команде, как все, а&nbsp;получала меньше&raquo;. Исправить
+        ситуацию руководство отказалось. &laquo;К&nbsp;мужчине&nbsp;бы так не&nbsp;отнеслись&raquo;,&nbsp;&mdash;
+        уверена Ирина Викторовна.</p>
+
+      <div class="row">
+        <div class="theme__cards offset-1 col-11 offset-lg-2 col-xl-5">
+          <ng-template ngFor let-heroine [ngForOf]="heroines">
+            <div class="card-heroines" *ngIf='condition_theme_karamysheva(heroine.name)'>
+              <div class="card-heroines__header">
+                <div class="card-heroines__img-wrapper">
+                  <img src="{{heroine.img_src}}" alt="" class="card-heroines__image" (click)="openDialog(heroine)">
+                </div>
+                <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+              </div>
+              <p class="card-heroines__text">
+                <span class="card-heroines__inner-text textForConverting">{{heroine.difficulties}}</span>
+              </p>
+            </div>
+          </ng-template>
+        </div>
+        <app-photogallery [heroineFromApp]="galina" class="col-11 col-xl-5 offset-1 offset-md-2 offset-xl-1">
+        </app-photogallery>
+      </div>
+
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">
+        Г.&nbsp;А.&nbsp;Карамышевой пришлось идти на&nbsp;прием к&nbsp;депутату, чтобы добиться вакансии,
+        положенной ей по&nbsp;закону о&nbsp;молодых специалистах. &laquo;Нужны законы, и&nbsp;тогда не&nbsp;будет
+        никакой дискриминации&raquo;,&nbsp;&mdash; считает Галина Анатольевна. Важно также &laquo;создавать
+        условия для возвращения из&nbsp;декретного отпуска&raquo;, поддерживать&nbsp;женщину, пока она воспитывает
+        маленьких
+        детей. &laquo;Должно быть и&nbsp;какое-то снисхождение, и&nbsp;условия&raquo;,&nbsp;&mdash; уверена
+        Г.&nbsp;А.&nbsp;Карамышева. В&nbsp;качестве примера она приводит опыт своих зарубежных коллег.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">У&nbsp;наших собеседниц все
+        получилось: сложилась карьера, состоялись серьезные проекты, были достигнуты важные результаты. Упорство, любовь
+        к&nbsp;науке, поддержка семьи и&nbsp;руководства&nbsp;&mdash; вот что помогло нашим героиням.</p>
+      <p class="theme-header__lead col-12 offset-1 col-md-11 offset-md-2">Они отмечают, что в&nbsp;Объединенном
+        институте ядерных исследований сейчас работать комфортно. Людмила Колупаева говорит об&nbsp;этом так:
+        &laquo;Отношения между коллегами в&nbsp;международных коллаборациях, в&nbsp;которых участвуют наши сотрудники,
+        и&nbsp;демократические традиции сотрудничества в&nbsp;подразделениях Института служат основанием для
+        оптимизма&raquo;.</p>
+
+
+      <!-- <app-photogallery [heroineFromApp]="elena"></app-photogallery> -->
+    </section>
+
+    <section class="theme container__theme" id="hobbies">
+      <div class="theme-header row">
+        <h2 class="theme-header__title theme-header__title_color_blue col-6 col-md-4 offset-1">Увлечения</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">&laquo;Наука&nbsp;&mdash; это и&nbsp;есть увлечение&raquo;</p>
+          <p class="theme-header__text">Наши героини схожи в&nbsp;своей любви к&nbsp;науке и&nbsp;преданности&nbsp;ей.
+            А&nbsp;вот увлечения у&nbsp;них разные. Как&nbsp;же они проводят свое свободное время,
+            где отдыхают и&nbsp;откуда черпают силы?</p>
+        </div>
+      </div>
+      <div class="theme__cards row offset-1 col-12">
+        <div class="card-heroines" *ngFor="let heroine of heroines ">
+          <div class="card-heroines__header" (click)="openVideo(heroine, heroine.timeCode.hobbies)">
+            <div class="card-heroines__img-wrapper">
+              <span class="card-heroines__time"><span><svg width="17" height="23" viewBox="0 0 17 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.8302 10.7773C16.3668 11.1771 16.3668 11.9811 15.8302 12.381L2.37878 22.4048C1.71916 22.8963 0.781249 22.4255 0.781249 21.6029L0.78125 1.5553C0.78125 0.732675 1.71916 0.261911 2.37878 0.75345L15.8302 10.7773Z"
+                      fill="#DD5061" />
+                  </svg>
+                </span>{{heroine.time.hobbies}}</span>
+              <img src="{{heroine.img_src}}" alt="" class="card-heroines__image">
+            </div>
+            <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+          </div>
+          <p class="card-heroines__text">
+            <span class="card-heroines__inner-text textForConverting">{{heroine.hobbies}}</span></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="theme container__theme" id="perfectDay">
+      <div class="theme-header row">
+        <h2 class="theme-header__title col-6 col-md-4 offset-1">Идеальный<br>день</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">&laquo;Мне кажется, что у&nbsp;меня каждый день идеальный&raquo;</p>
+          <p class="theme-header__text">Наши героини много работают, поэтому для большинства из&nbsp;них идеальный
+            день&nbsp;&mdash; это тот день, когда можно выспаться, никуда
+            не&nbsp;бежать и&nbsp;провести день с&nbsp;семьей.</p>
+          <p class="theme-header__text">Идеальный день может быть и&nbsp;на&nbsp;работе. Если в&nbsp;этот день будет
+            успешно решена какая-нибудь трудная задача.
+          </p>
+          <p class="theme-header__text">Вот как наши собеседницы описывают свой идеальный день.
+          </p>
+        </div>
+      </div>
+      <iframe class="lead__video col-14 col-md-12 offset-md-1"
+        srcdoc="<style>*{padding:0;margin:0;overflow:hidden}html,body{height:100%;cursor: pointer;
+          }img{position:absolute;width:100%;top:0;bottom:0;margin:auto}span{background-image: url(./assets/images/whiteArrow.svg);
+            background-size: 40% 45%;background-repeat: no-repeat;background-position: center;position:absolute;
+            top: 50%;left: 50%;height: 133px;width: 133px;border-radius: 50%;display: flex;
+            justify-content: center;align-items: center;font: 48px/1.5 sans-serif;color: white;
+            background-color: #DD5061;transform: translate(-50%, -50%);margin: 0;box-shadow: 0px 0px 6px rgb(0 0 0 / 0);transition: all .3s ease;}body:hover span{box-shadow: 0px 0px 6px rgb(0 0 0 / 65%);transform:scale(1.05) translate(-48%, -48%);}
+            @media screen and (max-width: 767px){span {height: 38px;width: 38px;font: 22px/1.5 sans-serif;}}</style>
+            <a href=https://www.youtube.com/embed/ZQzMCEtFoeY?start=3079&autoplay=1>
+              <img src=./assets/images/videocovers/perfectDay.jpg alt='Carier start video' style='filter: brightness(0.8);'><span></span></a>"
+        src="https://www.youtube.com/embed/ZQzMCEtFoeY" title="Main project video" allowfullscreen="">
+      </iframe>
+    </section>
+
+    <section class="theme container__theme" id="wishes">
+      <div class="theme-header theme-header_type_wishes row">
+        <h2 class="theme-header__title theme-header__title_color_lgray col-6 col-md-4 offset-1">Пожелания</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__quote">«Идти за&nbsp;своей мечтой!»</p>
+          <p class="theme-header__text">
+            <p class="theme-header__text">Наши собеседницы дают советы будущим и&nbsp;начинающим учёным, делятся опытом,
+              как не&nbsp;разочароваться в&nbsp;науке и&nbsp;идти за&nbsp;своей мечтой.
+            </p>
+        </div>
+      </div>
+      <div class="theme__cards row offset-1 col-12">
+        <div class="card-heroines" *ngFor="let heroine of heroines">
+          <div class="card-heroines__header" (click)="openVideo(heroine, heroine.timeCode.wishes)">
+            <div class="card-heroines__img-wrapper">
+              <span class="card-heroines__time"><span><svg width="17" height="23" viewBox="0 0 17 23" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M15.8302 10.7773C16.3668 11.1771 16.3668 11.9811 15.8302 12.381L2.37878 22.4048C1.71916 22.8963 0.781249 22.4255 0.781249 21.6029L0.78125 1.5553C0.78125 0.732675 1.71916 0.261911 2.37878 0.75345L15.8302 10.7773Z"
+                      fill="#DD5061" />
+                  </svg>
+                </span>{{heroine.time.wishes}}</span>
+              <img src="{{heroine.img_src}}" alt="" class="card-heroines__image">
+            </div>
+            <p class="card-heroines__name" (click)="openDialog(heroine)">{{heroine.name}}</p>
+          </div>
+          <p class="card-heroines__text textForConverting">{{heroine.wishes}}</p>
+        </div>
+      </div>
+    </section>
+
+    <app-about id="aboutProject"></app-about>
+    <app-creators></app-creators>
+
+    <p id="becomeAheroine" class="ask-text">Хотите стать героиней нашего проекта? <a
+        href="mailto:dlnp.jinr@gmail.com">Пишите&nbsp;нам!</a>
+    </p>
+  </main>
+  <app-footer></app-footer>
+</div>

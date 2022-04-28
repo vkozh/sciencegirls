@@ -1,0 +1,9 @@
+.theme__theme-square {
+  margin-bottom: 150px;
+}
+
+@media screen and (max-width: 767px) {
+  .theme__theme-square {
+    margin-bottom: 50px;
+  }
+}

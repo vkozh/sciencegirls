@@ -1,0 +1,15 @@
+.theme-header__quote {
+  margin: 14px 0 22px 30px;
+  font-family: Deca;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-header__quote {
+    margin-left: 0;
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,7 @@
+.theme-header__title_color_blue{
+  color: var(--rose);
+}
+
+.theme-header__title_color_blue::before {
+  background-color: var(--sky);
+}

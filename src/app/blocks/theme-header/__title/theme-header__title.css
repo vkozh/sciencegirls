@@ -1,0 +1,72 @@
+.theme-header__title {
+  min-height: 50px;
+  color: #fff;
+  margin-bottom: 50px;
+  line-height: 1.2;
+  font-weight: bold;
+  position: relative;
+  font-size: 48px;
+  z-index: 0;
+  text-align: center;
+}
+
+.theme-header__title::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  padding-bottom: 100%;
+  background-color: var(--rose);
+  border-radius: 50%;
+  z-index: -1;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@media screen and (max-width: 425px) {
+  .theme-header__title {
+    font-size: 24px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .theme-header__title {
+    font-size: 40px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .theme-header__title {
+    font-size: 38px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .theme-header__title {
+    font-size: 30px;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .theme-header__title::before {
+    width: 260px;
+    padding-bottom: 260px;
+    transform: translate(-50%, -60%);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .theme-header__title {
+    font-size: 22px;
+  }
+
+  .theme-header__title::before {
+    width: 180px;
+    padding-bottom: 180px;
+    transform: translate(-50%, -50%);
+  }
+}

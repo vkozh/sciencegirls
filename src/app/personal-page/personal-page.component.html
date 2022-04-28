@@ -1,0 +1,45 @@
+<article class="personal-page" mat-dialog-content>
+  <div class="personal-page__container">
+    <div class="personal-page__close offset-1 col-12">
+      <span mat-dialog-close>
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <line x1="1.13187" y1="0.396447" x2="31.6319" y2="30.8964" stroke="#514543" />
+          <line x1="0.424767" y1="30.8964" x2="30.9248" y2="0.396447" stroke="#514543" />
+        </svg>
+      </span>
+    </div>
+
+    <div class="personal-page__lead col-12 offset-1">
+      <div class="personal-page__about">
+        <h1 class="personal-page__name col-4">{{data.heroine.name}}</h1>
+        <p class="personal-page__bio textForConverting">{{data.heroine.shortBiography}}</p>
+      </div>
+      <div class="personal-page__photos">
+        <carousel [cellWidth]='620' [height]="500" [dots]='true' [loop]='true'>
+          <div class="carousel-cell" *ngFor="let image of data.heroine.images.images; index as i">
+            <img src="{{image}}" (click)="openPhoto(data.heroine, i)">
+          </div>
+        </carousel>
+      </div>
+    </div>
+    <section class="theme">
+      <div class="theme-header">
+        <h2 class="theme-header__title col-6 col-md-4 offset-1">Биография</h2>
+        <div class="theme-header__text-wrapper col-12 col-md-8 offset-1 offset-md-0">
+          <p class="theme-header__text offset-1 textForConverting mt-5 mt-md-0">
+            {{data.heroine.biography}}</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="personal-page__video col-md-12 offset-md-1">
+      <app-video [heroine]='data.heroine' [src]="data.trusturl"></app-video>
+    </div>
+    <div class="personal-page__video col-md-12 offset-md-1">
+      <app-video [heroine]='data.heroine' [src]="data.urlCollegues"></app-video>
+    </div>
+
+    <app-footer></app-footer>
+  </div>
+
+</article>

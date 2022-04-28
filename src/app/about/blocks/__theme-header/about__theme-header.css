@@ -1,0 +1,18 @@
+@media screen and (max-width: 767px) {
+  .about__theme-header {
+    margin: 25px auto 40px;
+  }
+
+  .about__theme-header .theme-header__title {
+    font-size: 24px;
+  }
+
+  .about__theme-header .theme-header__title::before {
+    width: 165px;
+    padding-bottom: 165px;
+  }
+
+  .about__theme-header .theme-header__text {
+    font-size: 24px;
+  }
+}

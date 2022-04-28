@@ -1,0 +1,25 @@
+.read-more__button {
+  margin: 0 40px;
+  vertical-align: middle;
+  background-image: url(../../../../assets/images/shevron.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px 20px;
+  background-color: #fff;
+  border: none;
+  width: 40px;
+  height: 20px;
+  padding: 0;
+  display: flex;
+  flex-shrink: 0;
+  transition: all .3s;
+  cursor: pointer;
+  transition: all .3s ease;
+}
+
+@media screen and (max-width: 767px) {
+  .read-more__button {
+    margin: 0;
+    background-size: 24px 14px;
+  }
+}

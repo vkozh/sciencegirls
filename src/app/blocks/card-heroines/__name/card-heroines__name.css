@@ -1,0 +1,20 @@
+.card-heroines__name {
+  font-size: 24px;
+  margin: 0 0 0 30px;
+  max-width: min-content;
+  align-self: end;
+  cursor: pointer;
+  line-height: 1.2;
+  transition: color .3s ease;
+}
+
+.card-heroines__name:hover {
+  color: var(--rose);
+}
+
+@media screen and (max-width: 425px) {
+  .card-heroines__name {
+    font-size: 18px;
+    margin: 0 0 0 20px;
+  }
+}

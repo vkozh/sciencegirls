@@ -1,0 +1,13 @@
+.footer__scicom-logo {
+  background-image: url("../../../../../assets/images/sci_com_logo.svg");
+  width: 25px;
+  height: 25px;
+  margin: 0 5px;
+  background-repeat: no-repeat;
+  transition: transform .6s ease;
+}
+
+.footer__author:hover .footer__scicom-logo {
+  transform: rotate(360deg);
+  transition: transform 1s ease;
+}

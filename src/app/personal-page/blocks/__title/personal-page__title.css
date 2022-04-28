@@ -1,0 +1,10 @@
+.personal-page__title {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+@media screen and (max-width: 677px) {
+  .personal-page__title {
+    font-size: 24px;
+  }
+}

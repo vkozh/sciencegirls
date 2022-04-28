@@ -1,0 +1,15 @@
+.personal-page {
+  max-height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.personal-page__video {
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 767px) {
+  .personal-page .carousel {
+    max-height: 270px !important;
+  }
+}

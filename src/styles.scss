@@ -1,0 +1,104 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import 'variables';
+@import '../node_modules/bootstrap/scss/bootstrap';
+@import './assets/Deca/deca.css';
+
+$font-family-sans-serif: Deca;
+
+:root {
+  --rose: #DD5061;
+  --sky: #CCE6F4;
+  --terra: #514543;
+  --l-gray: #D6D4D4;
+}
+
+* {
+  color: var(--terra);
+  font-family: Deca, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+.body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+.mat-dialog-container {
+  padding: 0 !important;
+  border-radius: 0 !important;
+}
+
+@media screen and (min-width: 1200px) {
+  .creators .carousel-arrows {
+    display: none !important;
+  }
+
+  .creators .carousel-container {
+    cursor: pointer !important;
+  }
+}
+
+.carousel-cells {
+  margin: 0 auto !important;
+  backface-visibility: hidden;
+}
+
+.carousel-cell,
+.carousel-container,
+.carousel {
+  backface-visibility: hidden;
+}
+
+.carousel-dot {
+  border-color: var(--terra) !important;
+}
+
+.carousel-dot-active {
+  background-color: var(--terra) !important;
+}
+
+.mat-menu-content {
+  padding: 20px 0 20px 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  max-height: 90vh;
+}
+
+@media screen and (max-width: 767px) {
+  .carousel-dots {
+    display: block;
+  }
+
+  .mat-menu-content {
+    padding: 30px 0 20px 0 !important;
+  }
+}
+
+
+.mat-menu-panel {
+  max-width: 500px !important;
+  max-height: 1000px !important;
+  box-shadow: 2px 9px 16px 2px rgb(0 0 0 / 11%) !important;
+  border-radius: 0 !important;
+}
+
+section {
+  overflow: auto;
+}
+
+.cdk-overlay-pane {
+  max-height: fit-content !important;
+}
+
+@media screen and (max-width: 1400px) {
+  .personal-page-panel {
+    width: 100%!important;
+    max-width: 100%!important;
+  }
+}

@@ -1,0 +1,6 @@
+.footer__author-title {
+  font-size: 18px;
+  color: var(--rose);
+  margin: 0;
+  display: flex;
+}

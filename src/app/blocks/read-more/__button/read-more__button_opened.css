@@ -1,0 +1,3 @@
+.read-more__button_opened {
+  transform: rotateX(180deg);
+}

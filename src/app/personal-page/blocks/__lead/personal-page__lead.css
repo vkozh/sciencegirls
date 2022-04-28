@@ -1,0 +1,13 @@
+.personal-page__lead {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 991px) {
+  .personal-page__lead {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}

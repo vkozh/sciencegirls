@@ -1,0 +1,6 @@
+.theme-square {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 380px));
+  gap: 70px 30px;
+  justify-content: center;
+}

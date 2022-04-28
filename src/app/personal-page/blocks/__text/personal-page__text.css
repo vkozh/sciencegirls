@@ -1,0 +1,12 @@
+.personal-page__text {
+  max-width: 900px;
+  margin-bottom: 0;
+  font-size: 30px;
+  z-index: 1;
+}
+
+@media screen and (max-width: 677px) {
+  .personal-page__text {
+    font-size: 24px;
+  }
+}

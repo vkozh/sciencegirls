@@ -1,0 +1,11 @@
+.personal-page__name {
+  padding-top: 54px;
+  padding-bottom: 20px;
+  font-size: 48px;
+}
+
+@media screen and (max-width: 576px) {
+  .personal-page__name {
+    font-size: 32px;
+  }
+}

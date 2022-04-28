@@ -1,0 +1,18 @@
+.video {
+  border: none;
+  /* margin-bottom: 60px; */
+  width: 100%;
+  --ratio: 9 / 16;
+  --container-width: 75em;
+  display: block;
+  height: calc(83vw * var(--ratio));
+  max-height: calc(var(--container-width) * var(--ratio));
+  max-width: var(--container-width);
+}
+
+@media screen and (max-width: 767px) {
+  .video {
+    --container-width: 100em;
+    height: calc(100vw * var(--ratio));
+  }
+}

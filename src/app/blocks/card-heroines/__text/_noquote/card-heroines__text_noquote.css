@@ -1,0 +1,4 @@
+.card-heroines__text_noquote:before {
+  content: '';
+  margin: 0;
+}

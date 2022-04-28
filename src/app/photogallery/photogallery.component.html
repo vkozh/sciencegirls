@@ -1,0 +1,7 @@
+<ng-template ngFor let-heroine [ngForOf]="heroines">
+  <div class="card-heroines" *ngIf='condition(heroine.name)'>
+    <div class="card-heroines__img-wrapper" *ngFor="let thumb of heroine.images.thumbs; index as i" >
+      <img src="{{thumb}}" class="card-heroines__img" (click)="openPhoto(heroine, i+1)">
+    </div>
+  </div>
+</ng-template>

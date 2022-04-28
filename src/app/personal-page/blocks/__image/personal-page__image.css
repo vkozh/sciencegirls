@@ -1,0 +1,9 @@
+.personal-page__image {
+ /* --ratio: 9 / 16;
+  --container-width: 100em;
+  object-fit: cover;
+  display: block;
+  height: calc(100vw * var(--ratio));
+  display: block;
+  margin: 0 auto;*/
+}

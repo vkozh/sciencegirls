@@ -1,0 +1,17 @@
+.theme-header {
+  display: flex;
+  margin: 85px auto 130px;
+}
+
+@media screen and (max-width: 992px) {
+  .theme-header {
+    margin: 65px auto 100px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .theme-header {
+    flex-wrap: wrap;
+    margin: 25px auto 25px;
+  }
+}

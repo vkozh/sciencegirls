@@ -1,0 +1,13 @@
+.social__item {
+  margin: 0 10px 0 0;
+  opacity: 1;
+  transition: all .3s ease;
+}
+
+.social__item:last-of-type {
+  margin: 0;
+}
+
+.social__item:hover {
+  opacity: .6;
+}

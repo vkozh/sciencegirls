@@ -1,0 +1,4 @@
+.card-heroines {
+  display: flex;
+  flex-wrap: wrap;
+}

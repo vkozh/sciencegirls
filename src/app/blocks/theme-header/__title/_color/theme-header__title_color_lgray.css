@@ -1,0 +1,7 @@
+.theme-header__title_color_lgray {
+  color: var(--rose);
+}
+
+.theme-header__title_color_lgray::before {
+  background-color: var(--l-gray);
+}

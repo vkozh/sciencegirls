@@ -1,0 +1,14 @@
+.logo__image {
+  width: 50px;
+}
+
+@media screen and (max-width: 767px) {
+
+  .logo:first-of-type .logo__image {
+    padding: 0 5px;
+  }
+
+  .header .logo__image {
+    display: none;
+  }
+}

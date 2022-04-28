@@ -1,0 +1,32 @@
+.footer__column {
+  min-height: 200px;
+  padding: 20px 20px 20px 40px;
+  display: flex;
+  align-items: center;
+  /*flex-basis: 50%;*/
+  flex-grow: 1;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  border-right: 1px solid var(--terra);
+}
+
+.footer__column:last-of-type {
+  border: 0;
+}
+
+@media screen and (max-width: 1023px) {
+  .footer__column {
+    border-right: 0;
+    border-bottom: 1px solid var(--terra);
+  }
+
+  .footer__column:last-of-type {
+    border: 0;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .footer__column {
+    padding: 0
+  }
+}

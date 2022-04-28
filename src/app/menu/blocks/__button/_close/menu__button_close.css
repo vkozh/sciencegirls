@@ -1,0 +1,6 @@
+.menu__button_close {
+  width: 33px;
+  height: 33px;
+  margin: 0 auto 30px 50px;
+  background-image: url(../../../../../assets/images/x.svg);
+}

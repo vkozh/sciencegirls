@@ -1,0 +1,8 @@
+.menu__item {
+  height: auto;
+  padding: 0 50px;
+}
+
+.menu__item:hover {
+  background-color: rgba(214, 212, 212, .3);
+}

@@ -1,0 +1,22 @@
+@import url("./blocks/personal-page.css");
+@import url("./blocks/__container/personal-page__container.css");
+@import url("./blocks/__close/personal-page__close.css");
+@import url("./blocks/__image/personal-page__image.css");
+@import url("./blocks/__title/personal-page__title.css");
+@import url("./blocks/__name/personal-page__name.css");
+@import url("./blocks/__text/personal-page__text.css");
+@import url("./blocks/__interview/personal-page__interview.css");
+@import url("./blocks/__lead/personal-page__lead.css");
+@import url("./blocks/__about/personal-page__about.css");
+@import url("./blocks/__photos/personal-page__photos.css");
+
+@import url("../blocks/theme/theme.css");
+@import url("../blocks/theme-header/theme-header.css");
+@import url("../blocks/theme-header/__header/theme-header__header.css");
+@import url("../blocks/theme-header/__text-wrapper/theme-header__text-wrapper.css");
+@import url("../blocks/theme-header/__text/theme-header__text.css");
+@import url("../blocks/theme-header/__title/theme-header__title.css");
+@import url("../blocks/theme-header/__title/_color/theme-header__title_color_blue.css");
+@import url("../blocks/theme-header/__title/_color/theme-header__title_color_lgray.css");
+
+@import url("./blocks/__theme-header-title/personal-page__theme-header-title.css");

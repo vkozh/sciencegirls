@@ -1,0 +1,17 @@
+.lead__title {
+  margin-top: 70px;
+  margin-bottom: 70px;
+  color: var(--rose);
+  font-size: 64px;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+@media screen and (max-width: 767px) {
+  .lead__title {
+    margin-top: 26px;
+    margin-bottom: 26px;
+    font-size: 36px;
+    font-size: clamp(27px, 8vw, 64px);
+  }
+}

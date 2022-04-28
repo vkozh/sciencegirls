@@ -1,0 +1,9 @@
+.theme-two__videos {
+  margin: 0 auto 160px;
+}
+
+@media screen and (max-width: 767px) {
+  .theme-two__videos {
+    margin: 0 auto 70px;
+  }
+}
